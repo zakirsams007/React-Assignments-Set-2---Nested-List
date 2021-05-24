@@ -155,7 +155,17 @@ const states = [
 ];
 
 function App() {
-  return <div id="main"></div>;
+  return 
+  <div id="main">
+    <ul>
+      {states.map((state,index)=>{
+        return(
+            <states key={index} id={'state'+(index+1)} name={state.name} cities={state.cities}/>
+        )
+      })}
+
+    </ul>
+  </div>;
 }
 
 export default App;
